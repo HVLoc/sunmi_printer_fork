@@ -35,37 +35,37 @@ public class SunmiPrinterMethod {
             try {
                 _woyouService = IWoyouService.Stub.asInterface(service);
                 String serviceVersion = _woyouService.getServiceVersion();
-                Toast
-                        .makeText(
-                                _context,
-                                "Sunmi Printer Service Connected. Version :" + serviceVersion,
-                                Toast.LENGTH_LONG
-                        )
-                        .show();
+                // Toast
+                //         .makeText(
+                //                 _context,
+                //                 "Sunmi Printer Service Connected. Version :" + serviceVersion,
+                //                 Toast.LENGTH_LONG
+                //         )
+                //         .show();
 
 
             } catch (RemoteException e) {
                 e.printStackTrace();
             } catch (NullPointerException e) {
 
-                Toast
-                        .makeText(
-                                _context,
-                                "Sunmi Printer Service Not Found",
-                                Toast.LENGTH_LONG
-                        ).show();
+                // Toast
+                //         .makeText(
+                //                 _context,
+                //                 "Sunmi Printer Service Not Found",
+                //                 Toast.LENGTH_LONG
+                //         ).show();
             }
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Toast
-                    .makeText(
-                            _context,
-                            "Sunmi Printer Service Disconnected",
-                            Toast.LENGTH_LONG
-                    )
-                    .show();
+            // Toast
+            //         .makeText(
+            //                 _context,
+            //                 "Sunmi Printer Service Disconnected",
+            //                 Toast.LENGTH_LONG
+            //         )
+            //         .show();
         }
     };
 
@@ -235,7 +235,7 @@ public class SunmiPrinterMethod {
         try {
 
             final int paper = _woyouService.getPrinterPaper();
-            return paper;
+            return 1;
         } catch (RemoteException e) {
             return 1; // error;
         } catch (NullPointerException e) {
